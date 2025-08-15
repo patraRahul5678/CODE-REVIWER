@@ -20,10 +20,10 @@ const App = () => {
   }, [])
 
   async function reviewCode() {
-    const response = await axios.post("https://code-reviwer-ghcr.vercel.app/ai/get-review", { prompt: code });
+    const response = await axios.post("https://code-reviwer-2.onrender.com/ai/get-review", { prompt: code });
     setreview(response.data);
   }
-
+// https://code-reviwer-2.onrender.com
   return (
     <>
       <main>
