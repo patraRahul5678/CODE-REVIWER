@@ -3,8 +3,9 @@
 A web application that takes your code as input and generates a review with suggestions for improvements using AI.
 
 ## 🚀 Live Demo
+Go to-->
 ```
-go to-->https://code-reviwer-hwuf.vercel.app/
+https://code-reviwer-hwuf.vercel.app/
 ```
 
 ---
