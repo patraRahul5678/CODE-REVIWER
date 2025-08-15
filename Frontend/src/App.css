@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* For Webkit browsers like Chrome, Safari, and Edge */
+
+/* Style the entire scroll bar area */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust the width to your liking */
+}
+
+/* Style the track (the background of the scroll bar) */
+::-webkit-scrollbar-track {
+  background-color: #979191; /* A very light, off-white color */
+  border-radius: 5px; /* Adds a slight curve to the corners */
+}
+
+/* Style the thumb (the part you drag) */
+::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0; /* A slightly darker, but still very light gray */
+  border-radius: 5px; /* Match the track's border-radius for a cohesive look */
+}
+
+/* Style the thumb when you hover over it for a more interactive feel */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c9c9c9; /* A slightly darker gray to show it's active */
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.5rem;
+}
+
+main .left {
+  background-color: black;
+  position: relative;
+  overflow: auto;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: black;
+  overflow: auto;
+}
+
+main .left .review {
+  background-color: green;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+main .right {
+  background-color: #474444;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  overflow: auto;
+  line-height: 2rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  /* main .left,
+  main .right {
+    flex-basis: 100%;
+  }*/
+
+  main .left .review {
+    position: static;
+    width: fit-content;
+    margin: 1rem auto;
+  } 
+
+  main .right{
+    font-size: 0.8rem;
+  }
+}
